@@ -3,6 +3,7 @@
 title horrible ffmpeg gui thing written as needed by John Storm#7185
 cd C:\Users\twitc\Downloads
 cls
+
 :legass
 SET _audio=a.mp3
 ECHO.
@@ -15,7 +16,8 @@ ECHO 6. convert to mov
 ECHO 7. change framerate
 ECHO 8. ram two files toghether
 ECHO 9. funny
-ECHO 10. exit
+ECHO x. exit
+ECHO d. debog
 
 set choice=
 set /p choice=NUMBER IDIOT! : 
@@ -30,7 +32,7 @@ if '%choice%'=='6' goto 7
 if '%choice%'=='7' goto fuck
 if '%choice%'=='8' goto ram
 if '%choice%'=='9' goto funny
-if '%choice%'=='10' exit	
+if '%choice%'=='x' exit	
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto legass
