@@ -1,4 +1,3 @@
-#!/bin/bash 
 @echo off
 title horrible ffmpeg gui thing written as needed by John Storm#7185
 cd C:\Users\twitc\Downloads
