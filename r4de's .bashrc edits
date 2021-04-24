@@ -1,4 +1,6 @@
 #begin rades edits
+alias decrypt='ls -la | nms -a'
+
 echo hiya
 
 #color for man pages
