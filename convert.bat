@@ -2,7 +2,6 @@
 title horrible ffmpeg gui thing written as needed by John Storm#7185
 cd C:\Users\twitc\Downloads
 cls
-
 :legass
 SET _audio=a.mp3
 ECHO.
@@ -15,6 +14,7 @@ ECHO 6. convert to mov
 ECHO 7. change framerate
 ECHO 8. ram two files toghether
 ECHO 9. funny
+ECHO f. ram files listed in amtrack.txt together
 ECHO x. exit
 ECHO d. debog
 
@@ -31,10 +31,18 @@ if '%choice%'=='6' goto 7
 if '%choice%'=='7' goto fuck
 if '%choice%'=='8' goto ram
 if '%choice%'=='9' goto funny
+if '%choice%'=='f' goto rambash
 if '%choice%'=='x' exit	
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto legass
+
+:rambash
+
+ffmpeg -f concat -i amtrack.txt -codec copy output%random%.mp4
+
+goto legass
+
 :funny
 echo must be mp4
 SET /P normvid= normal video input:
