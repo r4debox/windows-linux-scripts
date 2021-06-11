@@ -81,3 +81,4 @@ color B
 echo operation complete
 echo any key to exit...
 pause > a
+a
