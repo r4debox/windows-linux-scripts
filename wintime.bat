@@ -1,3 +1,4 @@
+@echo off
 net file 1>NUL 2>NUL
 if not '%errorlevel%' == '0' (
     powershell Start-Process -FilePath "%0" -ArgumentList "%cd%" -verb runas >NUL 2>&1
