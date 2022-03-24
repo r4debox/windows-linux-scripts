@@ -4,6 +4,8 @@ cd C:\Users\twitc\Downloads
 cls
 :legass
 SET _audio=a.mp3
+SET outputmp3=output.mp3
+SET outputmp4=output.mp4
 ECHO.
 ECHO 1. add music to mp4
 ECHO 2. convert mp4 to webm for 4chan
@@ -14,7 +16,8 @@ ECHO 6. convert to mov
 ECHO 7. change framerate
 ECHO 8. ram two files toghether
 ECHO 9. funny
-ECHO f. ram files listed in amtrack.txt together
+ECHO a. ram files listed in amtrack.txt together
+ECHO b. convert mp4 to mp3
 ECHO x. exit
 ECHO d. debog
 
@@ -31,11 +34,18 @@ if '%choice%'=='6' goto 7
 if '%choice%'=='7' goto fuck
 if '%choice%'=='8' goto ram
 if '%choice%'=='9' goto funny
-if '%choice%'=='f' goto rambash
+if '%choice%'=='a' goto rambash
+if '%choice%'=='b' goto mobrac
 if '%choice%'=='x' exit	
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto legass
+
+:mobrac
+SET /P video= video filename:
+SET /P outputmp3= file output name. Default is output.mp3:
+ffmpeg -i %video% -b:a 192K -vn %outputmp3%
+goto pause
 
 :rambash
 
