@@ -118,7 +118,7 @@ echo file name is : %_inputname%
 SET /P _audio= specify audio ::default is a.mp3:: :
 echo moth! press key to start
 pause>nul
-ffmpeg -i %_inputname% -i %_audio% -c copy -map 0:v:0 -map 1:a:0 -shortest output.mp4
+ffmpeg -i %_inputname% -i %_audio% -c copy -map 0:v:0 -map 1:a:0 -shortest %random%.mp4
 
 goto pause
 
